@@ -47,8 +47,6 @@ namespace Hazel {
 	public:
 		KeyReleasedEvent(int keycode) : KeyEvent(keycode) {}
 
-		inline int GetRepeatCount() const { return m_RepeatCount; }
-
 		std::string ToString() const override
 		{
 			std::stringstream ss;
@@ -56,6 +54,6 @@ namespace Hazel {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(KeyReleasedEvent)
+		EVENT_CLASS_TYPE(KeyReleased)
 	};
 }
