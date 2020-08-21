@@ -53,6 +53,8 @@ namespace Hazel {
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
 
+		HZ_CORE_INFO("Init Glad.");
+
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress); //init glad
 		HZ_CORE_ASSERT(status, "Failed to initialize Glad!");
 
